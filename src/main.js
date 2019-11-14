@@ -1,5 +1,6 @@
 const monsterContainer = document.getElementById("monster-container")
 const generateMonsterButton = document.getElementById("generate-button")
+const clearMonstersButton = document.getElementById("clear-button")
 
 const addMonster = monsterName => {
   const monsterDiv = document.createElement("div")
@@ -16,4 +17,10 @@ const addMonster = monsterName => {
 
 generateMonsterButton.onclick = function() {
   addMonster("Finn")
+}
+
+clearMonstersButton.onclick = function() {
+  while (monsterContainer.hasChildNodes()) {
+    monsterContainer.removeChild(monsterContainer.lastChild)
+  }
 }
