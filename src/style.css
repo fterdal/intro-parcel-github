@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background-color: #685F74;
+  color: white;
+}
+
+h1,h2,h3,h4,h5 {
+  text-align: center;
+}
+
+.monster-controller {
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 640px;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #624B6D;
+}
+
+.monster-controller button {
+  margin: 0 0.5rem;
+}
