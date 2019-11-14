@@ -31,10 +31,7 @@ npm install parcel-bundler
 * Create src directory. Add some files.
 ```sh
 mkdir src
-touch src/index.html
-touch src/style.css
-touch src/main.js
-touch src/helpers.js
+touch src/index.html src/style.css src/main.js src/helpers.js
 ```
 
 * Paste some code into each file
