@@ -2,7 +2,7 @@ const monsterContainer = document.getElementById("monster-container")
 const generateMonsterButton = document.getElementById("generate-button")
 const clearMonstersButton = document.getElementById("clear-button")
 
-const addMonster = monsterName => {
+function addMonster(monsterName) {
   const monsterDiv = document.createElement("div")
   monsterDiv.classList.add("monster")
   const monsterImg = document.createElement("img")
