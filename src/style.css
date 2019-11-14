@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Griffy', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -10,6 +10,10 @@ body {
 
 h1,h2,h3,h4,h5 {
   text-align: center;
+}
+
+button {
+  font-size: 1rem;
 }
 
 .wrapper {
