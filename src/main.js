@@ -1,3 +1,10 @@
+import faker from 'faker'
+
+const hello = async () => {
+  await Promise.resolve()
+  return 'hello'
+}
+
 const monsterContainer = document.getElementById("monster-container")
 const generateMonsterButton = document.getElementById("generate-button")
 const clearMonstersButton = document.getElementById("clear-button")
@@ -16,7 +23,8 @@ function addMonster(monsterName) {
 }
 
 generateMonsterButton.onclick = function() {
-  addMonster("Finn")
+  console.log(hello())
+  addMonster(faker.name.firstName())
 }
 
 clearMonstersButton.onclick = function() {

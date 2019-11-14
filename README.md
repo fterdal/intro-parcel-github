@@ -46,7 +46,7 @@ TODO: Create all that stuff for pasting 🙃
   * `npm install parcel-bundler`
 * NPM install faker
 * Run Parcel
-  * Add "start": "parcel src/index.html" to package.json scripts
+  * Add `"start": "parcel src/index.html"` to package.json scripts
   * `npm start`
   * It will notice that there's an import that hasn't been installed yet (faker)
     and installs that. Whoa, that's weird.
@@ -56,5 +56,29 @@ TODO: Create all that stuff for pasting 🙃
   * Take a look at the browser: [http://localhost:1234](http://localhost:1234)
   * Make a change to the HTML or CSS.
     * See how it reloads immediately? Very much wow!
+  * Now's a good time to add .cache and dist to .gitignore.
+    * We don't need to track these things in Git. Why? Because anyone who runs
+    our app will simply build them themselves using Parcel. These things are
+    called "build artifacts".
 
 ### Step 3: Profit
+* Unfortunately, we cannot write async functions. Not all browsers support async
+  await. So, for some older browsers, Parcel will try to compile our async await
+  code into soemthing those older browsers can parse and execute.
+  * The tool Parcel uses is called [Babel](https://babeljs.io/).
+  * Parcel markets itself as a "zero-configuration" bundler. Realistically,
+    we'll want to configure it _a little bit_ now and then.
+  * Let's add browserslist to package.json:
+```json
+  "browserslist": [
+    "> 3%"
+  ],
+```
+  * This browserslist property informs Parcel which browsers are worth targeting
+  * "> 3%" means "support browsers that are used by more than 3% of users
+    globally"
+  * This _does_ mean we're leaving a few users behind: they're browsers will not
+    be able to parse the JavaScript that we send them. There are further
+    optimizations we can choose to make if we want to support those browsers.
+    Deciding how long the list of supported browsers should be is a non-trivial
+    decision, and it is a question that front-end developers wrestle with often.
